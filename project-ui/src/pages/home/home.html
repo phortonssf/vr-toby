@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title align="center">VR-Toby</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-list>
+    <ion-item *ngFor="let slide of mockSlides" no-lines align="center">
+      <ion-thumbnail>
+        <img src="http://media.gettyimages.com/videos/animation-depicting-a-beating-heart-with-an-xray-look-to-it-video-id857-101?s=640x640" [navPush]="pushPage">
+      </ion-thumbnail>
+      <h2>Class {{slide.level}}</h2>
+      <h3>{{slide.completedNumber}}/{{slide.totalNumber}}</h3>
+    </ion-item>
+  </ion-list>
+ 
+</ion-content>
