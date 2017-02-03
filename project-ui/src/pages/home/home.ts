@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { NavController, NavParams } from 'ionic-angular';
+import { Modal, ModalController, NavController, NavParams, ViewController } from 'ionic-angular';
 import { TestViewPage } from '../test-view/test-view';
 @Component({
   selector: 'page-home',
@@ -17,11 +17,23 @@ export class HomePage {
     { level: 4, completedNumber: 0, totalNumber: 8}
     ]
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    
-    this.pushPage = TestViewPage;
+  constructor(public navCtrl: NavController, 
+              public navParams: NavParams,
+              public modal: ModalController
+             ) {
+    this.navCtrl = navCtrl
+   
   }
-
+  
+  presentContactModal() {
+   let testModal = this.modal.create(TestViewPage);
+   testModal.present(testModal);
+ }
+  
+  
+  // startTest(test){
+  // this.navCtrl.push(TestViewPage) 
+  // }
   ionViewDidLoad() {
   }
 

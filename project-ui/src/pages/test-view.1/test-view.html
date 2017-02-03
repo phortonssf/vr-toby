@@ -4,27 +4,30 @@
   See http://ionicframework.com/docs/v2/components/#navigation for more info on
   Ionic pages and navigation.
 -->
+<ion-header>
 
+  <ion-navbar>
+    <ion-title align="center">test-view</ion-title>
+  </ion-navbar>
 
-
+</ion-header>
 
 
 <ion-content padding>
- 
+  <div class="case-info">Hello</div>
+  <div class="x-ray-container">
+    <img src=>
+  </div>
+  <div class="test-buttons">
 
-<ion-slides [options]="extraOptions" #testSlider (ionSlideWillChange)="onSlideChanged()" direction='horizontal' effect='slide'class="ion-scroll-zoom" zoom='true' maxZoom="20">
-      <ion-slide *ngFor="let case of cases; let i = index">
-          <img [src]="case.images[i]"/>
-            <ion-card>
-  <ion-card-content>
-    {{ case .name }}
-  </ion-card-content>
-</ion-card>
-       </ion-slide>
+  </div>
   
+   <ion-slides #testSlider (ionSlideWillChange)="onSlideChanged()" direction='horizontal' effect='slide' zoom='true'>
+      <ion-slide *ngFor="let case of cases">
+          <img =>
+       </ion-slide>
     </ion-slides>
-
-
+  
   
  </ion-content>
     
